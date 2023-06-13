@@ -44,7 +44,7 @@ async def root():
     image_link = ET.SubElement(image, "link")
     image_link.text = JSON_URL
 
-    for entry in data["entries"]:
+    for entry in data["entries"][:15]:
         item = ET.SubElement(channel, "item")
 
         title = ET.SubElement(item, "title")
