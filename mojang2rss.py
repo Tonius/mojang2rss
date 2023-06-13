@@ -52,9 +52,8 @@ async def root():
 
         description = ET.SubElement(item, "description")
         description.text = (
-            f'<img src="https://launchercontent.mojang.com/{entry["image"]["url"]}" '
-            f'alt="{entry["image"]["title"]}" '
-            'style="float: right">'
+            f'<p><img src="https://launchercontent.mojang.com/{entry["image"]["url"]}" '
+            f'alt="{entry["image"]["title"]}"></p>'
         ) + entry["body"]
 
         guid = ET.SubElement(item, "guid")
